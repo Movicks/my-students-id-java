@@ -176,6 +176,9 @@ body{
 }
 .right-container-dropdown{
     margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .main-container{
     display: flex;
@@ -194,7 +197,8 @@ body{
 .row-container h1{
     font-size: 40px;
     font-weight: 400;
-    text-align: left;
+    align-self: start;
+    left: 0;
 }
 .checker-container{
     border: 2px solid rgb(238, 160, 59);
@@ -204,7 +208,7 @@ body{
     /* align-items: center; */
     justify-content: center;
     border-radius: 9px;
-    width: 50rem;
+    width: 57rem;
 }
 .id-checker-inputs{
     width: 100%;
@@ -258,6 +262,11 @@ body{
     align-items: center;
     visibility: hidden;
 }
+.dropdown3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .toggle-menu button{
     background: transparent;
     border: none;
@@ -274,6 +283,18 @@ body{
     filter: invert(100%);
 }
 @media(max-width:888px){
+    .row-container h1{
+        font-size: 40px;
+        font-weight: 400;
+        align-self: start;
+        left: 0;
+    }
+    .row-container{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
     .left-right-container{
         display: flex;
         justify-content: center;
@@ -317,11 +338,14 @@ body{
         flex-wrap: wrap;
         padding: 3.6rem;
     }
+    /* .dropdown3 {
+        display: none;
+    } */
+}
+@media(max-width:710px){
     .dropdown3 {
         display: none;
     }
-}
-@media(max-width:710px){
     .id-checker-inputs{
         width: 100%;
         padding: 15px 20px;
@@ -378,9 +402,6 @@ body{
         align-items: flex-start;
         justify-content: center;
     }
-    #startDate, #endDate{
-        width: 40px;
-    }
    
     .footer-container{
         display: flex;
@@ -407,42 +428,6 @@ body{
         width: auto;
         height: auto;
     }
-    /* .main {
-        border-radius: 7px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center; 
-    }
-    .places-container{
-        display: flex;
-        justify-content: space-between;
-        width: 100%; 
-    }
-    .places-to{
-        display: flex;
-    }
-    .Discover{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        background: #0280f7;
-        height: 30px;
-        border: 3px solid #fff;
-        font-size: 16px;
-        font-weight: 500;
-        color: #fff;
-    } */
-    /* .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 3.6rem;
-    }
-     */
 }
 @media(max-width:500px){ 
     
@@ -472,151 +457,9 @@ body{
     .left-right-container{
         display: none;
     }
-    /* .main { */
-        /* border-radius: 7px;
-        width: 5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center; */
-        /* flex-direction: column; */
-        /* background-color: red; */
-    /* } */
-    /* .block1{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    } */
-    /* .calender-container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 50%;
-        padding: 1px 5px;
-        background: rgb(238, 160, 59);
-        border-radius: 3px;
-    } */
-    /* .calenders{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 40px;
-        gap: 5px;
-    }
-    .date-container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .Start-date-contain{
-        display: flex;
-    }
-    .destination, #startDate, #endDate{
-        width: 40px;
-    }
-    .destination{
-        border: none;
-    }
-    #startDate, #endDate{
-        width: 40px;
-    }
-    #endDate{
-        border: none;
-    }
-    .calenders button{
-        height: 34px;
-        width: 70px;
-        background: #0162e0;
-        border: 2px solid white;
-        color: #fff;
-        border-radius: 3px;
-    }
-    .Guest-btn{
-        height: 34px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 90px;
-        background: rgb(238, 160, 59);
-        color: #646363;
-        gap: 5px;
-        border: 1px solid rgb(129, 129, 129);
-        border-radius: 3px;
-    }
-    .Guest-btn img{
-        width: 20px;
-    } */
-    /* .container {
-        grid-column-gap: 30px;
-        grid-row-gap: 10px;
-    } */
 }
 
-/* .main {
-	border-radius: 7px;
-    width: 50rem;
-	display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 
-
-/* .block {
-    height: 15rem;
-    padding: 0 3px;
-	border-radius: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-} */
-
-/* .one {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-} */
-/* .two {
-    gap: 2px;
-    display: flex;
-    flex-direction: column;
-} */
-/* .two img{
-    width: 100%;
-    height: 15rem;
-    border-radius: 5px;
-    position: relative;
-}
-.two p{
-    text-align: right;
-    font-size: 14px;
-} */
-/* .country-flag{
-    position: absolute;
-    z-index: 1;
-    width: 130px;
-    padding: 5px 8px;
-    margin: 7px;
-    height: 55px; 
-    background: #000000bd; 
-} */
-/* .country-flag h2{
-    font-size: 18px;
-    color: #fff;
-} */
-/* .country-flag a{
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    color: #fff;
-} */
-/* 
-.container {
-	display: grid;
-    align-items: center;
-    justify-content: center;
-	grid-column-gap: 30px;
-	grid-row-gap: 10px;
-} */
 .Students-id{
     max-width: 1390px;
     margin: auto;
@@ -639,47 +482,22 @@ body{
     justify-content: center;
     height: 21px;
 }
-.calender-container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 1px 5px;
-    background: rgb(238, 160, 59);
-    border-radius: 3px;
-}
-.calenders{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 40px;
-    gap: 5px;
-}
-.date-container{
+.p-item{
+    background: #979696;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 100;
+    font-family: serif;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 41px;
+    margin-left: 15px;
 }
-.Start-date-contain{
-    display: flex;
+.p-item a{
+    text-decoration: none;
+    color: #0162e0;
 }
-.destination, #startDate, #endDate{
-    height: 34px;
-    border-radius: 3px;
-}
-.destination{
-    border: none;
-}
-#startDate, #endDate{
-    width: 100px;
-    border-left: none;
-    border-bottom: none;
-    border-top: none;
-}
-#endDate{
-    border: none;
-}
-
 .block1 h3{
     color: #022a5f;
 }

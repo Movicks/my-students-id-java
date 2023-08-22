@@ -369,11 +369,8 @@ items.forEach(item => {
   itemDiv.className = 'item';
 
   const itemName = document.createElement('h3');
-  
- 
-  itemName.textContent = item.studentsId;
 
-  
+  itemName.textContent = item.studentsId;
 
 const itemDescription = document.createElement('p');
   itemDescription.textContent = item.description;
