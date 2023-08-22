@@ -1,0 +1,207 @@
+.containerPaul{
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    .top_nav{
+        width: 102%;
+        height: fit-content;
+        padding: 5px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 5px;
+        margin: auto;
+
+        .p_web_url{
+            width: fit-content;
+            height: fit-content;
+            padding: 2px;
+            >b{
+                color: #0f3253;
+                font-weight: bolder;
+                font-size: large;
+                .p_lB{
+                    color: #1370c7;
+                }
+            }
+        }
+
+        .p_input{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-width: 80%;
+            max-width: fit-content;
+            height: fit-content;
+            padding: 5px;
+            border-radius: 5px;
+            background: rgb(238, 160, 59);
+
+            .texts{
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                #p_text{
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 10px 2px 10px 5px;
+                    margin-right: 5px;
+                    border-radius: 5px;
+                }
+                .calender{
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 4px;
+                    background-color: white;
+                    border-radius: 5px;
+
+                    #cal{
+                        min-width: 100px;
+                        width: fit-content;
+                        height: fit-content;
+                        padding: 5px 2px 5px 5px;
+                        border-radius: 5px;
+                        
+                    }
+                    .cal1:after{
+                        content: "|";
+                        width: fit-content;
+                        height: fit-content;
+                        font-size: large;
+                    }
+                    
+                }
+                .p_button{
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 8px;
+                    margin-left: 5px;
+                    border: 2px solid rgb(255, 255, 255);
+                    border-radius: 5px;
+                    margin-right: 5px;
+                    background: #0280f7;
+                    color: whitesmoke;
+                }
+                
+            }
+            >.p_button{
+                width: fit-content;
+                height: fit-content;
+                padding: 0px 5px;
+                margin-left: 5px;
+                border: 1px solid #808080;
+                color: #808080;
+                background-color: rgba(240, 248, 255, 0);
+                border-radius: 5px;
+                margin-right: 5px;
+                display: flex;
+                align-items: center;
+                >img{
+                    width: 20px;
+                    margin: 5px;
+                }
+            }
+        }
+    }
+    .p_main_item_cont{
+        width: fit-content;
+        height: fit-content;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        position: relative;
+        gap: 5px;
+
+        .p_item{
+            width: 200px;
+            height: 250px;
+            padding: 5px;
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+
+            .img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                object-fit: cover;
+                object-position: center;
+                z-index: 0;
+
+                &:hover{
+                    transform: scale(1.1);
+                    transition-duration: 5s;
+                }
+            }
+            .p_itemContent{
+                width: fit-content;
+                min-width: 150px;
+                height: fit-content;
+                padding: 5px;
+                background-color: #292929a9;
+                z-index: 2;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                border-radius: 5px;
+
+                .locName{
+                    margin-bottom: 2.5px;
+                    font-size: medium;
+                    text-transform: capitalize;
+                    color: whitesmoke;
+                }
+                .propAmount{
+                    margin-top: 2.5px;
+                    font-size: small;
+                    font-weight: normal;
+                    color: whitesmoke;
+                }
+               
+            }
+            .hf{
+                width: 90%;
+                height: fit-content;
+                padding: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-weight: lighter;
+                text-transform: capitalize;
+
+            }
+            &.p_discover{
+                background-color: #e0f0ff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .discover_p_btn{
+                border: 2px solid white;
+                width: 90%;
+                margin: auto;
+                padding: 5px;
+                font-size: large;
+                font-weight: bold;
+                text-transform: capitalize;
+                background-color: #0280f7;
+                .text{
+                    color: #e0f0ff;
+                }
+            }
+        }
+    }
+}
+.containerPaul input{
+    border: none;
+}
+.hf b{
+    font-weight: lighter;
+}

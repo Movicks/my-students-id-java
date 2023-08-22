@@ -5,24 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check My Student ID</title>
     <link rel="stylesheet" href="mainstyles.css">
+    <link rel="stylesheet" href="paulStyles.css">
     <style>
         .container2 {
-          text-align: center;
+          width: 100%;
+          padding: 0px 0px;
+          display: none;
         }
         .dropdown-menu {
           display: none;
-          /* position: absolute; */
           list-style: none;
           background-color: green;
-          padding: 2px;
+          padding: 0px 0px;
           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          width: 140px;
+          width: 99%;
         }
-      
+        .dropdown-m{
+          list-style: none;
+        }
         .dropdown-m:hover .dropdown-menu {
           display: block;
         }
+        .dropdown-m li{
+          width: 100%;
+          background: linear-gradient(rgb(191, 255, 42), rgb(163, 218, 11), rgb(130, 165, 4));
+        }
+        .dropdown-m a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            padding: 0px 10px;
+            width: 96%;
+            height: 50px;
+            color: azure;
+            font-size: 16px;
+            background: linear-gradient(rgb(191, 255, 42), rgb(163, 218, 11), rgb(130, 165, 4));
+        }
+        .menu-link{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 10px;
+            width: 100%;
+            height: 50px;
+            border: none;
+            color: azure;
+            font-size: 16px;
+            background: linear-gradient(rgb(191, 255, 42), rgb(163, 218, 11), rgb(130, 165, 4));
+        }
+        .menu-link img{
+            width: 18px;
+            filter: invert(90%);
+            transform: rotate(270deg);
+        }
+        /* .toggle-menu{
+
+        } */
+        .dropdown-menu li{
+            height: 50px;
+            font-size: 19px;
+            align-items: center;
+            padding: 0px 15px;
+            justify-content: center;
+            display: flex;
+            background: linear-gradient(rgb(191, 255, 42), rgb(163, 218, 11), rgb(130, 165, 4));
+        }
+        .dropdown-menu li a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+
       </style>
+      
 </head>
 <body>
 <div class="home-container">
@@ -30,7 +84,7 @@
    <div class="Nav-contain">
     <div class="navber-container">
         <div class="left-container">
-            <a href="#"><img src="imgaes/home.png" alt="home"/></a>
+            <a href="#"><img src="home.png" alt="home"/></a>
             <div class="left-right-container">
                 <div class="search">
                     <input type="text" class="search-box" placeholder="search products">
@@ -38,7 +92,7 @@
                 </div>
                 <div class="dropdown">
                         <button class="dropdown-btn">Students Id Lists
-                            <img src="imgaes/caret-down.png" class="dropdown-btn"/>
+                            <img src="caret-down.png" class="dropdown-btn"/>
                         </button>
                     <ul class="dropdown-content">
                         <li><a href="#">By Country</a></li>
@@ -47,7 +101,7 @@
                 </div>
                 <div class="dropdown2">
                     <button class="dropdown-btn2">Students Id Maps
-                        <img src="imgaes/caret-down.png" class="dropdown-btn2"/>
+                        <img src="caret-down.png" class="dropdown-btn2"/>
                     </button>
                    <ul class="dropdown-content2">
                       <li><a href="#">User Type</a></li>
@@ -59,15 +113,15 @@
                 <div class="Nearest"><a href="#">ZUR000109QEE Lottery</a></div>
             </div>
         </div>
-        <div class="toggle-menu">
-            <a href="" class="menu-linker">
-               MENU <img src="imgaes/menu_more.png" alt="photo" class="toggle-icon">
-            </a>  
-        </div>
         <div class="right-container-dropdown">
+            <div class="toggle-menu" onclick="toggleDiv()">
+                <button class="menu-linker" onclick="toggleDiv()">
+                   MENU <img src="menu_more.png" alt="photo" class="toggle-icon" onclick="toggleDiv()">
+                </button>  
+            </div>
             <div class="dropdown3">
                 <button class="dropdown-btn3">Help and Information
-                    <img src="imgaes/caret-down.png" class="dropdown-btn3"/>
+                    <img src="caret-down.png" class="dropdown-btn3"/>
                 </button>
                <ul class="dropdown-content3 dropdown-content5">
                   <li><a href="#">About this website</a></li>
@@ -79,29 +133,42 @@
  </div>
     <section class="main-container">
         <div class="row-container">
-            <div class="container2">
+            <div class="container2" id="myDiv">
                 <ul>
+                    <li class="dropdown-m">
+                        <button class="menu-link">Help and Information
+                            <img src="caret-down.png" class="dropdown-btn9"/>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">About this website</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </li>
                   <li class="dropdown-m">
                     <div class="search">
                         <input type="text" class="search-box" placeholder="search products">
                         <button type="submit" class="search-btn">search</button>
                     </div>
-                    <a href="#" class="menu-link">First Menu<i class="icon-arrow"></i></a>
+                    <button class="menu-link">Students Id Lists
+                        <img src="caret-down.png" class="dropdown-btn9"/>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">By Country</a></li>
+                        <li><a href="#">By introduction Date</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-m">
+                    <button class="menu-link">Students Id Maps
+                        <img src="caret-down.png" class="dropdown-btn9"/>
+                    </button>
                     <ul class="dropdown-menu">
                         <li><a href="#">User Type</a></li>
                         <li><a href="#">User Category</a></li>
                         <li><a href="#">Council Task Band</a></li>
                     </ul>
                   </li>
-                  <li class="dropdown-m">
-                    <a href="#" class="menu-link">Second Menu <i class="icon-arrow"></i></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">About Us</a></li>
-                      <li><a href="#">Services</a></li>
-                      <li><a href="#">Contact</a></li>
-                    </ul>
-                  </li>
+                  <li class="dropdown-m"><a href="#">Nearest ZUR000109QEE</a></li> 
+                  <li class="dropdown-m"><a href="#">ZUR000109QEE Lottery</a></li>
                 </ul>
               </div>
             <h1>Check My Student Id</h1>
@@ -119,148 +186,127 @@
             </div>
         </div>
     </section>
-    <div class="container">
-        <div class="block1 one">
-            <h3>Booking<span>.com</span></h3>
-            <div class="calender-container">
-                <div class="calenders">
-                    <input type="text" class="destination" placeholder="e.g. city, region, district">
-                    <div class="date-container">
-                        <input type="date" id="startDate">
-                        <input type="date" id="endDate">
+    <div class="containerPaul">
+        <div class="top_nav">
+            <div class="p_web_url">
+                <b>Booking<span class="p_lB">.com</span></b>
+            </div>
+            <div class="p_input">
+                <div class="texts">
+                    <input type="text" id="p_text" placeholder="e.g city, region, district ...">
+                    <div class="calender">
+                        <input type="date" name="calender1" id="cal" class="cal1">
+                        <input type="date" name="calender1" id="cal" class="cal2">
                     </div>
-                    <button>Search</button>
+                    <button class="p_button">search</button>
                 </div>
-                <div class="Guest">
-                    <button class="Guest-btn"><img src="/imgaes/friends.png" alt=""/> Guests</button>
-                </div>
+                <button class="p_button"><img src="./friends.png" alt="friends">Guests</button>
             </div>
         </div>
-		<div class="main">
-			<div class="block two">
-                <div class="two-row">
-                 <div class="country-flag">
-                    <h2>Trondheim</h2>
-                    <a href="#" class="property">45 properties</a>
-                 </div>
-                <img src="/imgaes/1.jpg" alt="pss" />
+        <div class="p_main_item_cont">
+            <div class="p_item">
+                <img class="img" src="./1.jpg" alt="pss">
+                <div class="p_itemContent">
+                    <b class="locName">trondendam</b>
+                    <b class="propAmount">45 properties</b>
                 </div>
-                <p>text lorem</p>
             </div>
-			<div class="block two">
-                <div class="two-row">
-                 <div class="country-flag">
-                    <h2>Sixt</h2>
-                    <a href="#" class="property">21 properties</a>
-                 </div>
-                <img src="/imgaes/1.jpg" alt="pss" />
+            <div class="p_item">
+                <img class="img" src="./1.jpg" alt="pss">
+                <div class="p_itemContent">
+                    <b class="locName">trondendam</b>
+                    <b class="propAmount">45 properties</b>
                 </div>
-                <p>text lorem</p>
             </div>
-			<div class="block two">
-                <div class="two-row">
-                 <div class="country-flag">
-                    <h2>Bransgore</h2>
-                    <a href="#" class="property">4 properties</a>
-                 </div>
-                <img src="/imgaes/1.jpg" alt="pss" />
+            <div class="p_item">
+                <img class="img" src="./1.jpg" alt="pss">
+                <div class="p_itemContent">
+                    <b class="locName">trondendam</b>
+                    <b class="propAmount">45 properties</b>
                 </div>
-                <p>text lorem</p>
             </div>
-			<div class="block two">
-                <div class="places-container">
-                    <div class="places-to">
-                        Hello
-                    </div>
-                    <p>from</p>
+            <div class="p_item p_discover">
+                <div class="hf">
+                    <b>hello</b>
+                    <b>from</b>
                 </div>
-                <div class="places-container">
-                    <div class="places-to">
-                        Hello
-                    </div>
-                    <p>from</p>
+                <div class="hf">
+                    <b>hello</b>
+                    <b>from</b>
                 </div>
-                <div class="places-container">
-                    <div class="places-to">
-                        Hello
-                    </div>
-                    <p>from</p>
+                <div class="hf">
+                    <b>hello</b>
+                    <b>from</b>
                 </div>
-                <div class="places-container">
-                    <div class="places-to">
-                        Hello
-                    </div>
-                    <p>from</p>
+                <div class="hf">
+                    <b>hello</b>
+                    <b>from</b>
                 </div>
-                <div class="places-container">
-                    <div class="places-to">
-                        Hello
-                    </div>
-                    <p>from</p>
+                <div class="hf">
+                    <b>hello</b>
+                    <b>from</b>
                 </div>
-                <div class="places-container">
-                    <div class="places-to">
-                        Hello
-                    </div>
-                    <p>from</p>
-                </div>
-                <div class="places-container">
-                    <div class="places-to">
-                        Hello
-                    </div>
-                    <p>from</p>
-                </div>
-                <div class="places-container">
-                    <div class="places-to">
-                        Hello
-                    </div>
-                    <p>from</p>
-                </div>
-                <div class="places-container">Discover link</div>
+                <button class="discover_p_btn">
+                    <b class="text">discover link</b>
+                </button>
             </div>
-		</div>
+        </div>
     </div>
 
     <div class="Students-id" >
         <a href="#" class="Students-id" id="itemContainer"></a>
     </div>
-<div class="paragraph">
+  <div class="paragraph">
     <div class="paragrph-section">
-        <p>Use Check My Postcode to find out all the key information for your local postcode.</p>
+        <p>Use Check My Students Id to find out all the key information for your local Students Id.</p>
         <p>Find out typical house prices, council tax bands and business rateable values.</p>
         <p>See who represents you in parliament and your local councils, and discover how Ofsted has rated local schools.</p>
         <p>Check whether superfast broadband is available, and see how popular it is.</p>
-        <p>See where your postcode is on a map.</p>
-        <p>Find the nearest postcodes to where you are right now.</p>
-        <p>Read what other people have said about your postcode, and leave your own comments for others to read.</p>
+        <p>See where your Students Id is on a map.</p>
+        <p>Find the nearest Students Id to where you are right now.</p>
+        <p>Read what other people have said about your Students Id, and leave your own comments for others to read.</p>
     </div>
-</div>
+  </div>
    </div>
 </div>
-    
-    <!-- <div class="container">
-        <h1 class="title">Dropdown Menu</h1>
-        <ul>
-          <li class="dropdown-m">
-            <a href="#" data-toggle="dropdown-m">First Menu <i class="icon-arrow"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </li>
-          <li class="dropdown-m">
-            <a href="#" data-toggle="dropdown-m">Second Menu <i class="icon-arrow"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div> -->
+<div class='footer1_container'>
+    <footer>
+        <div class='footer-container'>
+            <div class='sec quickLinks'>
+               <ul>
+                 <li><a href='#'>Search</a></li>
+                 <li><a href='#'>Students Id by County</a></li>
+                 <li><a href='#'>Students Id by Introduction Date</a></li>
+                 <li><a href='#'>Students Id Near Me</a></li>
+                 <li><a href='#'>Students Id Lottery</a></li>
+               </ul>
+            </div>
+            <div class='sec quickLinks'>
+                <ul >
+                 <li><a href='#'>Students Id Map by User Type</a></li>
+                 <li><a href='#'>Students Id by Use Category</a></li>
+                 <li><a href='#'>Students Id Map by Council Tax Band</a></li>
+                </ul>
+            </div>
+            <div class='sec quickLinks'>
+                <ul>
+                  <li><a href='#'>About this Website</a></li>
+                  <li><a href='#'>Disclaimer and Limitations</a></li>
+                  <li><a href='#'>Privacy Policy</a></li>
+                </ul>
+             </div>
+        </div>
+    </footer>
+   </div> 
+   <div class='copyrightText text-center'>
+       <p>Check My Student ID</p>
+   </div>
+   <div class='copyrightText text-center'>
+    <p>CheckMyStudentsID.UK is a Good Stuff website.</p> 
+   </div>
+
+   <iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20230816/r20190131/zrt_lookup.html" style="display: none;"></iframe>
+
 
     <script src="main.js"></script>
     <script src="Items.js"></script>
