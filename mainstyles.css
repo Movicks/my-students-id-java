@@ -485,8 +485,8 @@ body{
 .p-item{
     background: #979696;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 100;
+    font-size: 24px;
+    font-weight: 600;
     font-family: serif;
     display: flex;
     align-items: center;
@@ -496,6 +496,7 @@ body{
 }
 .p-item a{
     text-decoration: none;
+    background: #979696;
     color: #0162e0;
 }
 .block1 h3{
