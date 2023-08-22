@@ -6,7 +6,7 @@ html {
     font-size: 99.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 3rem;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 body{
@@ -16,9 +16,9 @@ body{
     scroll-behavior: smooth;
     /* overflow-x: hidden; */
  }
- body::-webkit-scrollbar{
+ /* body::-webkit-scrollbar{
     display: none;
-}
+} */
 .home-container{
     width: 100vw;
     flex-direction: column;
@@ -407,7 +407,7 @@ body{
         width: auto;
         height: auto;
     }
-    .main {
+    /* .main {
         border-radius: 7px;
         width: 100%;
         display: flex;
@@ -434,15 +434,15 @@ body{
         font-size: 16px;
         font-weight: 500;
         color: #fff;
-    }
-    .container {
+    } */
+    /* .container {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
         padding: 3.6rem;
     }
-    
+     */
 }
 @media(max-width:500px){ 
     
@@ -609,14 +609,14 @@ body{
     text-decoration: none;
     color: #fff;
 } */
-
+/* 
 .container {
 	display: grid;
     align-items: center;
     justify-content: center;
 	grid-column-gap: 30px;
 	grid-row-gap: 10px;
-}
+} */
 .Students-id{
     max-width: 1390px;
     margin: auto;

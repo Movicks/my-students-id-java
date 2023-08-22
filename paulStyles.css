@@ -2,6 +2,8 @@
     width: fit-content;
     height: fit-content;
     margin: auto;
+    margin-bottom: 10px;
+
     .top_nav{
         width: 102%;
         height: fit-content;
@@ -144,16 +146,16 @@
                 min-width: 150px;
                 height: fit-content;
                 padding: 5px;
-                background-color: #292929a9;
+                background-color: #1d1c1ca9;
                 z-index: 2;
                 position: relative;
                 display: flex;
                 flex-direction: column;
-                border-radius: 5px;
+                border-radius: 2px;
 
                 .locName{
-                    margin-bottom: 2.5px;
-                    font-size: medium;
+                    margin-bottom: 5px;
+                    font-size: 18px;
                     text-transform: capitalize;
                     color: whitesmoke;
                 }
@@ -174,7 +176,12 @@
                 justify-content: space-between;
                 font-weight: lighter;
                 text-transform: capitalize;
-
+            }
+            .hf b{
+                font-size: 14px;
+            }
+            .hf .from{
+                font-size: 12px;
             }
             &.p_discover{
                 background-color: #e0f0ff;
@@ -204,4 +211,9 @@
 }
 .hf b{
     font-weight: lighter;
+}
+.Double-from{
+    color: #747373;
+    text-align: right;
+    font-size: 11px;
 }
